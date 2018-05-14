@@ -1,0 +1,1 @@
+require('expose-loader?jQuery!expose-loader?$!jquery/dist/jquery.js');
