@@ -8,7 +8,7 @@ import {Filters} from './filters';
 export class Catalog extends Component<CatalogProps> {
     componentDidMount() {
         this.props.setCatalogData({
-            categoryBaseUrl: '',
+            categoryBaseUrl: 'http://www.reserved.gpos.lppdev.pl/pl/pl/woman/all-1/clothes/outerwear',
             categoryId: 3829,
             categoryName: 'Płaszcze kurtki',
             productsApiUrl: 'http://m.gpos.lppdev.pl/api/',
@@ -21,7 +21,7 @@ export class Catalog extends Component<CatalogProps> {
     render() {
         return (
             <>
-                <Filters productsQuantity={this.props.productsQuantity}/>
+                <Filters productsQuantity={this.props.productsQuantity} />
                 <FlatList data={this.props.products}
                           renderItem={({item}) => <ProductCard product={item} />}
                           keyExtractor={(item, index) => index.toString()}
